@@ -1,15 +1,11 @@
 
-
 <body>
   <header></header>
   <main class="content">
     <input #nameInput appFocus class="content__input" type="text" placeholder="Type name here to predict...">
     <button class="content__predictBtn" (click)="parseName()">Predict</button>
     <h2>Last person added: {{people[0]?.name}}</h2>
-    <p>{{test}}</p>
-    <button (click)="changeInput()">Change input value</button>
-    <button (click)="changeInputToDefault()">Return input value</button>
-    <app-name-card (personEmitter)="removePerson($event)" *ngFor="let person of people" [person]="person" [testInput]="test"></app-name-card>
+    <app-name-card (personEmitter)="removePerson($event)" *ngFor="let person of people" [person]="person"></app-name-card>
   </main>
   <footer></footer>
 </body>

@@ -1,7 +1,32 @@
 .wrapper{
   display: flex;
+  font-size: 20px;
+  position: relative;
+  background-color: whitesmoke;
+  border-bottom: #0e0d0d 3px dashed;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 .removeBtn{
   align-self: center;
   margin-left: 700px;
+  position: absolute;
+  right: 10px;
+  background-color: #0e0d0d;
+  color: aliceblue;
 }
+
+.removeBtn:hover{
+  cursor: pointer;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul li{
+  margin-left: 20px;
+}
+

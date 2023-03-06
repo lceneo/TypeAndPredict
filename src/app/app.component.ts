@@ -12,7 +12,6 @@ export class AppComponent{
 
   public inputName: string;
   public people: Person[] = [];
-  public test: string = "default input";
 
   @ViewChild("nameInput") public inputElem: ElementRef<HTMLInputElement>;
 
@@ -47,14 +46,6 @@ export class AppComponent{
       person.gender = tuple[0];
     else
       person.nationality = tuple[0].country;
-  }
-
-  public changeInput(){
-    this.test = "input changed";
-  }
-
-  public changeInputToDefault(){
-    this.test = "default input";
   }
 
   public removePerson(personToRemove: Person){
