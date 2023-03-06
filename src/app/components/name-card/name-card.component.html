@@ -1,0 +1,19 @@
+
+<div class="wrapper">
+  <div>
+    <h3>Name: {{person.name}}</h3>
+    <button (click) = "changeValueTest()">Change value</button>
+    <p>{{valueToChange}}</p>
+    <p>Age: {{person.age}}</p>
+    <ul>Gender:
+        <li>{{person.gender.gender}} {{person.gender.probability}}</li>
+        <li>Other: {{1 - person.gender.probability}}</li>
+    </ul>
+    <ul>Nationality:
+        <li *ngFor="let nationality of person.nationality">{{nationality.country_id}} {{nationality.probability}}</li>
+        <li #otherNationality></li>
+    </ul>
+  </div>
+  <button class="removeBtn" (click)="destroyPerson()">Remove person</button>
+</div>
+
